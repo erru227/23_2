@@ -1,14 +1,12 @@
 const http = require('http');
-const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/style.css') {
-        res.writeHead(200, { 'Content-Type': 'text/css' });
-        res.end(fs.readFileSync('style.css'));
-    } else {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end(fs.readFileSync('index.html'));
-    }
+    response.writeHead(200, {"Content-Type": "text/html"});
+    response.write("<h1>Hello, Node.js!</h1>");    
+    response.end();
 });
 
+/*Remember, || means "or"*/
+/*process.env.PORT says to use any port provided by the device program is running on*/
+/*So process.env.PORT || 3000 means either use a port from Render, or use 3000 if that doesn't work*/
 server.listen(process.env.PORT || 3000);
