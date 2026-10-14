@@ -1,9 +1,11 @@
 const http = require('http');
 
-const server = http.createServer((req, res) => {
+/*req is request, res is response*/
+const server = http.createServer((request, response) => {
     response.writeHead(200, {"Content-Type": "text/html"});
     response.write("<h1>Hello, Node.js!</h1>");    
     response.end();
+
 });
 
 /*Remember, || means "or"*/
