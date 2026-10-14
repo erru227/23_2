@@ -1,0 +1,13 @@
+{
+    "name": "nodejs-start-example",
+    "version": "1.0.0",
+    "description": "Used to showcase basic server launch functionality",
+    "scripts": {
+        "start": "node Lec23_2.js"
+    },
+    "author": "ERRM",
+    "repository": {
+        "type": "git",
+        "url": "TODO"
+    }
+}
